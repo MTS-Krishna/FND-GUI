@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake News Detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">📰 Fake News Detection</h1>
+
+        <form action="/" method="POST">
+            <div class="mb-3">
+                <label for="txt" class="form-label">Enter News Article:</label>
+                <textarea class="form-control" name="txt" id="txt" rows="6" required>{{ request.form.get('txt', '') }}</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Detect</button>
+        </form>
+
+        {% if result is not none %}
+        <div class="alert {{ 'alert-success' if result == 1 else 'alert-danger' }} mt-4">
+            <strong>Prediction:</strong> This article is <b>{{ 'Real' if result == 1 else 'Fake' }}</b>.
+        </div>
+
+        <!-- Feedback section -->
+        <div class="feedback-box mt-3">
+            <h5>Was this prediction correct?</h5>
+            <form action="/feedback" method="POST" class="d-flex gap-2">
+                <input type="hidden" name="original_text" value="{{ original_text }}">
+                <input type="hidden" name="prediction" value="{{ result }}">
+                <button type="submit" name="feedback" value="yes" class="btn btn-outline-success">Yes</button>
+                <button type="submit" name="feedback" value="no" class="btn btn-outline-danger">No</button>
+            </form>
+        </div>
+        {% endif %}
+
+    </div>
+</body>
+</html>
