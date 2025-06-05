@@ -66,12 +66,13 @@ Eight different machine learning models were evaluated, including:
       Vectorization (TF-IDF)
             │
     Machine Learning Models
-            │
-  ┌─────────┴──────────┐
-  │                    │
-Prediction         Feedback Logging
-  │                    │
-  ▼                    ▼
+            │ 
+            ┌───────────────────┐
+            │                   │
+      Prediction        Feedback Logging
+            │                   │
+            ▼                   ▼
+
 ```
 
 Flask UI /          feedback.csv
