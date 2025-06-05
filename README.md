@@ -61,7 +61,7 @@ Eight different machine learning models were evaluated, including:
             │
      Text Preprocessing
             │
-      Vectorization (TF-IDF)
+    Vectorization (TF-IDF)
             │
     Machine Learning Models
             │
@@ -75,8 +75,6 @@ Prediction         Feedback Logging
 
 Flask UI /          feedback.csv
 Streamlit UI
-
-````
 
 ---
 
