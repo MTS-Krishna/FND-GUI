@@ -1,51 +1,93 @@
-# 📰 Exposing the Truth with Advanced Fake News Detection Powered by NLP
+# 📰 Fake News Detection using Machine Learning
 
-Welcome to our project repository! This project is aimed at **detecting fake news articles** using **Natural Language Processing (NLP)** and **state-of-the-art machine learning models**, ensuring a trustworthy information ecosystem in the digital age.
+This project is an intelligent web-based Fake News Detection System that classifies news content as either **real** or **fake** using state-of-the-art machine learning algorithms. It is designed to support real-time input and feedback via both **Flask** and **Streamlit** interfaces.
+
+---
 
 ## 🚀 Project Overview
 
-In a world overflowing with information, the spread of fake news poses a serious threat to public perception and decision-making. This project uses advanced NLP techniques and deep learning models like **BERT** to build a system capable of detecting fake news with high accuracy.
-
-> **“Exposing the truth, one article at a time!”**
+In an era dominated by information, fake news poses a serious threat to society. This system uses Natural Language Processing (NLP) and supervised machine learning models to detect misleading or false news articles based on their textual content.
 
 ---
 
-## 📌 Features
+## 📁 Project Structure
 
-- Advanced text preprocessing and cleaning
-- Deep Exploratory Data Analysis (EDA)
-- Feature engineering using TF-IDF and BERT embeddings
-- Classical ML & Transformer-based model training
-- Performance evaluation with precision, recall, F1-score, ROC
-- Explainability using SHAP & LIME
-- Interactive web-based interface using **Streamlit**
-- Scalable and modular project structure
+project_root/
+│
+├── FlaskApp/
+│ ├── static/
+│ ├── templates/
+│ │ └── index.html
+│ ├── feedback.csv
+│ └── app.py
+│
+├── StreamlitApp/
+│ └── streamlit_app.py
+│
+├── Model/
+│ └── model.pkl
+│
+├── Dataset/
+│ └── Dataset1.csv
+│ └── ...
+│
+├── README.md
+└── requirements.txt
+
+yaml
+Copy
+Edit
 
 ---
 
-## 🧠 Technologies Used
+## 🧠 Models Used
 
-| Purpose             | Tools / Libraries                                |
-|---------------------|--------------------------------------------------|
-| Programming         | Python                                           |
-| IDE/Notebook        | Google Colab, Jupyter, VS Code                   |
-| Data Handling       | pandas, numpy                                    |
-| Visualization       | matplotlib, seaborn, wordcloud, plotly           |
-| NLP                 | nltk, spaCy, transformers (HuggingFace)          |
-| ML/DL Models        | scikit-learn, XGBoost, TensorFlow, Keras         |
-| Explainability      | LIME, SHAP                                       |
-| Deployment          | Streamlit, Flask (optional), Docker (planned)    |
+The following machine learning classifiers were trained and evaluated:
+
+| Model                         | Accuracy (%) |
+|------------------------------|--------------|
+| Logistic Regression          | 87.14        |
+| Stochastic Gradient Descent  | 86.32        |
+| Random Forest                | 82.20        |
+| Decision Tree                | 82.07        |
+| Gradient Boosting            | 80.71        |
+| XGBoost                      | 80.73        |
+| Multinomial Naive Bayes      | 78.79        |
+| Bernoulli Naive Bayes        | 76.08        |
+
+🏆 **Logistic Regression** was selected for deployment based on performance.
 
 ---
 
-## 📂 Folder Structure
+## 📊 Dataset
+
+- Multiple datasets were combined, including:
+  - **LIAR dataset from PolitiFact (Kaggle)**
+  - Additional datasets sourced and combined manually for variety.
+- Dataset Type: **Textual**
+- Total Samples: **~20,000+**
+- Features: News content (Article)
+- Target: **Binary (Fake = 1, Real = 0)**
+
+---
+
+## 🔧 Features
+
+- End-to-End Data Preprocessing Pipeline
+- Real-Time News Prediction
+- Feedback Form for User Validation
+- Dual Deployment Options:
+  - Flask (HTML + CSS based)
+  - Streamlit (Modern Python UI)
+
+---
+
+## 📦 Setup Instructions
+
+### ✅ Prerequisites
+
+Ensure Python 3.10+ is installed. Clone the repo:
 
 ```bash
-.
-├── data/                 # Raw and processed datasets
-├── notebooks/            # Jupyter/Colab notebooks for EDA and training
-├── models/               # Saved models and checkpoints
-├── app/                  # Streamlit or Flask app files
-├── README.md             # You are here!
-├── requirements.txt      # Project dependencies
-└── LICENSE               # Optional license info
+git clone https://github.com/your-username/fake-news-detection.git
+cd fake-news-detection
