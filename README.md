@@ -162,7 +162,6 @@ This project is licensed under the MIT License.
 
 ## 📌 Acknowledgments
 
-* [Kaggle Fake News Dataset](https://www.kaggle.com/c/fake-news/data)
 * [LIAR Dataset](https://www.cs.ucsb.edu/~william/data/liar_dataset.zip)
 * [FakeNewsNet](https://github.com/KaiDMML/FakeNewsNet)
 * Open-source Python libraries and the ML research community
