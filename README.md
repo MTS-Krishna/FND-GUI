@@ -73,9 +73,6 @@ Prediction         Feedback Logging
 
 ```
 
-Flask UI /          feedback.csv
-Streamlit UI
-
 ---
 
 ## 🛠️ Tools and Technologies
@@ -99,7 +96,7 @@ Streamlit UI
 ### Option 1: Flask Web App
 
 ```bash
-cd FlaskApp
+cd Flask
 python app.py
 ````
 
@@ -110,8 +107,8 @@ python app.py
 ### Option 2: Streamlit App
 
 ```bash
-cd StreamlitApp
-streamlit run streamlit_app.py
+cd Streamlit
+streamlit run app.py
 ```
 
 * Minimalist, responsive Python-native UI
@@ -122,25 +119,17 @@ streamlit run streamlit_app.py
 ## 📂 Project Directory Structure
 
 ```
-project_root/
-│
-├── FlaskApp/
-│   ├── templates/
-│   ├── static/
-│   ├── feedback.csv
-│   └── app.py
-│
-├── StreamlitApp/
-│   └── streamlit_app.py
-│
-├── Model/
-│   └── model.pkl
-│
-├── Dataset/
-│   └── merged_dataset.csv
-│
-├── README.md
-└── requirements.txt
+📁 Flask/
+📁 Streamlit/
+📁 dataset_1/
+📁 dataset_2/
+📁 dataset_3/
+📁 dataset_4/
+📁 dataset_5/
+📄 Fakenewsdetection.ipynb
+📄 README.md
+📄 model.pkl
+📄 requirements.txt
 ```
 
 ---
