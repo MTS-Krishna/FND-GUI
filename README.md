@@ -24,7 +24,7 @@ In an age where information spreads rapidly across digital platforms, fake news 
 
 ## 📊 Dataset Description
 
-- **Source**: Combined from **LIAR dataset (PolitiFact via Kaggle)** and three additional curated datasets.
+- **Source**: Combined from **LIAR dataset (PolitiFact)** and four additional curated datasets.
 - **Type**: Structured tabular dataset with text-based features.
 - **Size**: ~20,000+ articles.
 - **Features**: News content (headline + body), and a binary label (real/fake).
