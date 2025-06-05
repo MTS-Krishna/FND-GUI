@@ -55,8 +55,6 @@ Eight different machine learning models were evaluated, including:
 ## ⚙️ System Architecture
 
 ```
-
-```
       ┌─────────────┐
       │  Raw News   │
       └─────┬───────┘
@@ -66,12 +64,12 @@ Eight different machine learning models were evaluated, including:
       Vectorization (TF-IDF)
             │
     Machine Learning Models
-            │ 
-            ┌───────────────────┐
-            │                   │
-      Prediction        Feedback Logging
-            │                   │
-            ▼                   ▼
+            │
+  ┌─────────┴──────────┐
+  │                    │
+Prediction         Feedback Logging
+  │                    │
+  ▼                    ▼
 
 ```
 
