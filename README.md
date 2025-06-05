@@ -1,4 +1,3 @@
-```markdown
 # 📰 Fake News Detection Using Machine Learning
 
 ## Overview
